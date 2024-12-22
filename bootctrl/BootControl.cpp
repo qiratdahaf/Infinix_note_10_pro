@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-#include <cstdint>
 #define LOG_TAG "android.hardware.boot@1.1-mtkimpl"
 
 #include <memory>
@@ -141,12 +140,6 @@ Return<bool> BootControl::setSnapshotMergeStatus(MergeStatus status) {
 
 Return<MergeStatus> BootControl::getSnapshotMergeStatus() {
     return impl_.GetSnapshotMergeStatus();
-}
-
-// Methods from ::android::hardware::boot::V1_1::IBootControl follow.
-Return<uint32_t> BootControl::getActiveBootSlot() {
-    if (!impl_.GetActiveBootSlot()) return 0;
-    return impl_.GetActiveBootSlot();
 }
 
 IBootControl* HIDL_FETCH_IBootControl(const char* /* hal */) {
