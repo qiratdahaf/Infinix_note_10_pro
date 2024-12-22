@@ -1,4 +1,0 @@
-service vibrator-radiant /vendor/bin/hw/android.hardware.vibrator-service.radiant
-    class hal
-    user root
-    group root
