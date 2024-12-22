@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2019 The Android Open Source Project
+ * Copyright (C) 2024 The Android Open Source Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -52,8 +52,6 @@ class BootControl : public IBootControl {
     Return<bool> setSnapshotMergeStatus(MergeStatus status) override;
     Return<MergeStatus> getSnapshotMergeStatus() override;
 
-    // Methods from ::android::hardware::boot::V1_2::IBootControl follow.
-    Return<uint32_t> getActiveBootSlot() override;
   private:
     android::bootable::BootControl impl_;
     android::bootable::BootControlExt implext_;
