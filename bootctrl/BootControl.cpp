@@ -29,7 +29,7 @@
 namespace android {
 namespace hardware {
 namespace boot {
-namespace V1_2 {
+namespace V1_1 {
 namespace implementation {
 
 using ::android::hardware::boot::V1_0::CommandResult;
@@ -159,7 +159,7 @@ IBootControl* HIDL_FETCH_IBootControl(const char* /* hal */) {
 }
 
 }  // namespace implementation
-}  // namespace V1_2
+}  // namespace V1_1
 }  // namespace boot
 }  // namespace hardware
 }  // namespace android
