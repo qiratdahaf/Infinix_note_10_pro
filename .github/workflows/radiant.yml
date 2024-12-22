@@ -1,4 +1,4 @@
-name: Recovery Build TWRP
+name: Radiant
 
 on:
   workflow_dispatch:
