@@ -23,7 +23,7 @@ on early-fs
 
 on late-fs
     # Mount RW partitions which need run fsck
-    mount_all /first_stage_ramdisk/fstab.mt6768 --late
+    mount_all /first_stage_ramdisk/fstab.mt6785 --late
 
 on post-fs
     start boot-hal-1-2
@@ -100,14 +100,14 @@ service mtk.plpath.utils.link /vendor/bin/mtk_plpath_utils
     oneshot
     seclabel u:r:recovery:s0
     
-service keystore_auth /vendor/bin/keystore_auth
+service keystore_auth /system/bin/keystore_auth
     oneshot
     user system
     group root
     disabled
     seclabel u:r:recovery:s0
 
-service keystore /vendor/bin/keystore /tmp/misc/keystore
+service keystore /system/bin/keystore /tmp/misc/keystore
     user root
     group root drmrpc readproc log
     disabled
@@ -150,7 +150,7 @@ on property:ro.crypto.state=unencrypted
 on property:twrp.decrypt.done=true
     stop teei_daemon
     stop vendor.gatekeeper-1-0
-    stop vendor.keymaster-4-1-trustonic
+    stop vendor.keymaster-4-0-beanpod
 
 on property:crypto.ready=0
     stop teei_daemon
