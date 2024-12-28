@@ -153,4 +153,4 @@ TARGET_INIT_VENDOR_LIB := libinit_Infinix-X695C
 TARGET_RECOVERY_DEVICE_MODULES := libinit_Infinix-X695C
 
 # Maintainer & version
-TW_DEVICE_VERSION := X695C_Gilanggegea
+TW_DEVICE_VERSION := X695C-DEBUG_Gilanggegea
